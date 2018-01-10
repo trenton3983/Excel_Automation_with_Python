@@ -68,7 +68,7 @@ def run_excel():
             raise e
         sys.exit(1)
 
-    ws1 = wb.Sheets('Dual_Edge_Power')
+    ws1 = wb.Sheets('Sheet1')
 
     """Determine number of unique TestCondition1 values"""
     last_r = ws1.UsedRange.Rows.Count
@@ -186,7 +186,7 @@ def ev_report_table(excel, wb, ws1, ws3, row_list):
             ws4.Cells(x + 3, 3).Value =\
                 f'=GETPIVOTDATA("Avgerage of Max_I_TC2(A)",Average_of_Max!R5C1,"TestCondition1","{test_points[x - 1]}")'
 
-        ws4.Cells(x + 3, 6).Value = f'=Dual_Edge_Power!{tol_address}'
+        ws4.Cells(x + 3, 6).Value = f'=Sheet1!{tol_address}'
         ws4.Cells(x + 3, 7).Value = f'=if(D{x + 3}>F{x + 3},"Fail","Pass")'
 
     ws4.Activate()  # set the worksheet with the EV report table as active
