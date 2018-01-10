@@ -109,7 +109,7 @@ def run_excel():
 
 def ev_report_table(excel, wb, ws1, ws3, row_list):
     """
-    This method creats the electrical validation report table
+    This method creats the report table
     :param excel: Excel object
     :param wb: Excel workbook object
     :param ws1: Excel worksheet objects
@@ -122,7 +122,7 @@ def ev_report_table(excel, wb, ws1, ws3, row_list):
     ws3_first_data_row = row_list[1]
     ws3_last_data_row = used.Row + used.Rows.Count - 1  # used.Row -> returns first row used, Rows.Count -> rows used
 
-    """Create EV Report Table worksheet"""
+    """Create Report Table worksheet"""
     worksheet_ev_table = 'EV_Report_Table'
     wb.Sheets.Add().Name = worksheet_ev_table
     ws4 = wb.Sheets(worksheet_ev_table)
