@@ -1,6 +1,7 @@
 import win32com.client as win32
 import sys
 import os
+from get_hostname_ip import get_host_name_ip
 from pythoncom import com_error
 
 win32c = win32.constants
@@ -55,7 +56,7 @@ def pivot_table(wb, ws1, pt_ws, num_test_cond, ws_name, pt_name, pt_rows, pt_fil
     return row_first_chart_value, row_last_chart_value
 
 
-def run_excel():
+def run_excel(f_path, f_name):
     filename = os.path.join(f_path, f_name)
     excel = win32.gencache.EnsureDispatch('Excel.Application')
     excel.Visible = True
@@ -240,9 +241,12 @@ def ev_report_table(excel, wb, ws1, ws3, row_list):
 
 if __name__ == "__main__":
 
+    hostname, _ = get_host_name_ip()
+
+    if hostname == 'INTREPID':
+        f_path = r'd:\PythonProjects\Excel_Automation_with_Python\Pivot_Tables_and_Table'
+
     """Test Data"""
-
     f_name = 'pivot_tables.xlsx'
-    f_path = r'C:\PythonProjects\Excel_Automation_with_Python\Pivot_Tables_and_Table'
 
-    run_excel()
+    run_excel(f_path, f_name)
