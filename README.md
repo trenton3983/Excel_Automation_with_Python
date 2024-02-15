@@ -12,7 +12,7 @@ Anaconda distribution with Python 3.xx from: https://www.anaconda.com/download/
 Many of us work in environments where the exclusive consumption of data
 is via Excel.  I image most, if not everything done in Excel, can be
 more easily automated in Pandas.  When I write scripts for Excel, all of
-the equations are in Excel (e.g. =max(A1:A30)) not just some value.
+the equations are in Excel (e.g. `=max(A1:A30)`) not just some value.
 
 ## Why Don't I Use an Existing Python Package for Excel
 
@@ -22,13 +22,15 @@ There are a number of Python packages for working in Excel:
 * xlwt
 * http://www.python-excel.org/
 
-Most of the packages work with constraints, all the Excel functions aren't
-available or the package my not work with a preexisting file, so I use:
+Most of the packages work with constraints; all of the Excel functions aren't
+available, or the package may not work with a preexisting file, so I use:
+
 ```python
 import win32com.client as win32
 
 
 excel = win32.gencache.EnsureDispatch('Excel.Application')
 ```
+
 The com object exposes the full functionality of Excel.
 
