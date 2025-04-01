@@ -1,10 +1,17 @@
-# Create Pivot Tables and a Regular Table with Python Automation of Excel
+![repo image](pivot_table_repo_image.png)
 
-* The Jupyter notebook was used for testing.
-* The py file is a finalized script for stand alone execution.
-* `get_host_name` an be located in the following [repository][1]
- - It's just a small script used to select a directory based on which computer I'm using.  It can be removed w/o affecting the functionality of the main code.
+# Automate Excel to Create Pivot Tables and Tables with Python
 
+This project demonstrates how to use Python to automate the creation of pivot tables and regular Excel tables.
 
+## Project Structure
 
-  [1]: https://github.com/trenton3983/Utilities/blob/master/get_hostname_ip.py
+- **`pivot_table_automation.ipynb`**: A Jupyter Notebook used for testing and iterative development.
+- **`pivot_table_automation.py`**: A standalone Python script version for production or scheduled use.
+
+## Utility Script
+
+This project references a small utility script `get_host_name`, which selects a directory based on the host machine. It's used for local path resolution and can be removed without affecting the core functionality.
+
+- You can find `get_host_name` here:  
+  [Utilities/get_hostname_ip.py](https://github.com/trenton3983/Utilities/blob/master/get_hostname_ip.py)
